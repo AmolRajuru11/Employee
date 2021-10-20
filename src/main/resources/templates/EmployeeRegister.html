@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>employee registration</title>
+</head>
+<body class="container">
+	<div th:insert="fragments/commonui :: userhead"></div>
+	<div class="card">
+		<div class="card-header bg-light text-red text-center">
+			<h2>EMPLOYEE REGISTER PAGE</h2>
+		</div>
+
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Name</label> <input type="text" class="form-control"
+							id="empNameId">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Email</label> <input type="text" class="form-control"
+							id="empMailId">
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Gender</label> <input type="radio" name="gender"
+							value="Male" checked="checked">Male &nbsp &nbsp<input
+							type="radio" name="gender" value="Female" />Female
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Address</label>
+						<textarea rows="2" cols="4" class="form-control" id="empAddrId"></textarea>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<label>Projects</label> <select class="form-control"
+							id="empProjId"></select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	PROJS :
+	<select name="prjs" multiple="multiple">
+		<option value="NIT">NIT</option>
+		<option value="VND">VND</option>
+		<option value="HTC">HTC</option>
+		<option value="XYZ">XYZ</option>
+	</select> SLOTS :
+	<input type="checkbox" name="slots" value="SHIFT-A">SHIFT-A
+	<input type="checkbox" name="slots" value="SHIFT-B">SHIFT-B
+	<input type="checkbox" name="slots" value="SHIFT-C">SHIFT-C
+	<input type="checkbox" name="slots" value="SHIFT-D">SHIFT-D
+	<input type="submit" value="ADD EMPLOYEE">
+	<span th:text="${message}"></span>
+</body>
+</html>
